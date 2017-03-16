@@ -1,8 +1,6 @@
-<hr>
-<p>{{ message }}</p>
-<hr>
-<input #myInput type="text" [(ngModel)]="message">
-<button (click)="onClick(myInput.value)">Clicking events</button>
+<input #myInput type="text" [(ngModel)]="message.text">
+<button (click)="update.emit({text:message})">Clicking events</button>
 
+<br>
 <!-- you can still use $event for checking events by using the code below-->
 <!--<button (click)="onClick($event, myInput.value)">Clicking events</button>-->

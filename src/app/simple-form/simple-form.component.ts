@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-simple-form',
@@ -9,10 +9,7 @@ export class SimpleFormComponent implements OnInit {
 
 
   @Input() message;
-
-  onClick(value){
-    console.log(value);
-  }
+  @Output() update = new EventEmitter();
 
   constructor() { }
 
